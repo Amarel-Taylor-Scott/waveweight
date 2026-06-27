@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "waveweight"
-version = "0.1.0"
-description = "Search periodic sample-weight patterns (sine/comb/sawtooth/...) that lift out-of-period transfer for time-ordered ML — score by honest train->test transfer, bootstrap to robust per-record weights. numpy-only."
+version = "0.2.0"
+description = "Discover sample-weight schemes that lift out-of-period transfer — index patterns AND data-driven local-window drivers x weight curves, validated on a held-out split against a magnitude-matched null. numpy-only."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }

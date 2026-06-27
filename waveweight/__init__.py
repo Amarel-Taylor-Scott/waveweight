@@ -18,16 +18,20 @@ lever is *which rows to trust*. numpy-only.
 
 from __future__ import annotations
 
-from . import patterns, synth
+from . import patterns, synth, curves, window, candidates
 from .weighted import weighted_ridge, make_weighted_ridge, pearson
 from .score import evaluate, time_split
 from .search import random_search
 from .bootstrap import bootstrap_refine
+from .candidates import build_all, index_pattern_candidates, window_driver_candidates
+from .nulltest import null_controlled_search, three_split
 
 __all__ = [
-    "patterns", "synth",
+    "patterns", "synth", "curves", "window", "candidates",
     "weighted_ridge", "make_weighted_ridge", "pearson",
     "evaluate", "time_split",
     "random_search", "bootstrap_refine",
+    "build_all", "index_pattern_candidates", "window_driver_candidates",
+    "null_controlled_search", "three_split",
 ]
-__version__ = "0.1.0"
+__version__ = "0.2.0"
