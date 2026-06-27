@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "waveweight"
+version = "0.1.0"
+description = "Search periodic sample-weight patterns (sine/comb/sawtooth/...) that lift out-of-period transfer for time-ordered ML — score by honest train->test transfer, bootstrap to robust per-record weights. numpy-only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Amarel Taylor Scott" }]
+keywords = ["machine-learning", "sample-weighting", "time-series", "covariate-shift",
+            "bootstrap", "feature-engineering", "kaggle", "tabular"]
+dependencies = ["numpy>=1.21"]
+
+[project.scripts]
+waveweight = "waveweight.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["waveweight"]
